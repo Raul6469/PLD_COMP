@@ -8,7 +8,6 @@
 #include "grammar/ProgBaseVisitor.h"
 #include "src/Prog.h"
 
-
 using namespace antlr4;
 using namespace std;
 
