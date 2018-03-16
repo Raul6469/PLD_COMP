@@ -76,7 +76,6 @@ int main(int argc, const char *argv[])
 	CommonTokenStream tokens(&lexer);
 	ProgParser parser(&tokens);
 	tree::ParseTree * tree = parser.prog();
-
 	Prog visitor;
 
 	visitor.visit(tree);
