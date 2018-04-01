@@ -11,7 +11,7 @@ class IRInstr;
 class BasicBlock
 {
     public:
-        vector <IRInstr> getIRInstrs() const;
+         vector <IRInstr> getIRInstrs() const;
 
         void addIRInstr(IRInstr iRInstr);
 
