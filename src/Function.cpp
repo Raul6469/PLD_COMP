@@ -148,7 +148,6 @@ Function::Function(string name, Bloc * bloc, Type typeRetour)
     this->typeRetour = typeRetour;
 }
 
-
 Function::~Function()
 {
     #ifdef MAP

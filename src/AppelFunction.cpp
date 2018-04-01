@@ -104,7 +104,6 @@ AppelFunction::AppelFunction(const AppelFunction &unAppelFunction) {
 #endif
 }
 
-
 AppelFunction::AppelFunction(std::string name, std::vector<Variable *> variables) {
     this->name = name;
     this->variables = variables;
@@ -112,7 +111,6 @@ AppelFunction::AppelFunction(std::string name, std::vector<Variable *> variables
     cout << "Appel au constructeur de <AppelFunction>" << endl;
 #endif
 }
-
 
 AppelFunction::~AppelFunction() {
 #ifdef MAP

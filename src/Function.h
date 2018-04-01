@@ -10,10 +10,10 @@ using namespace std;
 class ControlFlowGraph;
 class Bloc;
 class Declaration;
+
 class Function
 {
     public:
-
         void generateIR(ControlFlowGraph * controlFlowGraph);
 
         friend ostream & operator<<(ostream & stream, const Function & function);
@@ -41,7 +41,6 @@ class Function
         Function(string name, Bloc * bloc, Type typeRetour);
 
         virtual ~Function();
-
 
     private:
         std::string name;

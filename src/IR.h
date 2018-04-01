@@ -11,8 +11,7 @@ class ControlFlowGraph;
 
 class IR
 {
-    public :
-
+    public:
         void generateASM(ostream & os) const;
 
         void addControlFlowGraph(ControlFlowGraph * controlFlowGraph);
@@ -25,7 +24,6 @@ class IR
 
         virtual ~IR();
 
-    private :
-
+    private:
         vector <ControlFlowGraph*> controlFlowGraphs;
 };

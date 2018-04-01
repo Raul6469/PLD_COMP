@@ -3,7 +3,6 @@ using namespace std;
 #include "DeclarationTab.h"
 #include <iostream>
 
-
 void DeclarationTab::generateIR(ControlFlowGraph * controlFlowGraph)
 {
 
@@ -30,7 +29,6 @@ DeclarationTab::DeclarationTab(std::string name, Type type, std::string size):De
     cout << "Appel au constructeur de <DeclarationTab>" << endl;
 #endif
 }
-
 
 DeclarationTab::~DeclarationTab() {
 #ifdef MAP

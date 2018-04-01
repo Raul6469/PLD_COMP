@@ -46,7 +46,6 @@ IR::IR(const IR & iR)
 }
 
 IR::IR(vector <ControlFlowGraph*> controlFlowGraphs)
-
 {
     #ifdef MAP
         cout << "Appel au constructeur de <IR>" << endl;

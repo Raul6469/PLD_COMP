@@ -49,7 +49,6 @@ InitialisationTab::InitialisationTab(Type type,std::string name, std::vector<Var
 #endif
 }
 
-
 InitialisationTab::~InitialisationTab() {
 #ifdef MAP
     cout << "Appel au destructeur de <InitialisationTab>" << endl;

@@ -64,6 +64,7 @@ void Bloc::resolveScopeVariables(std::vector<Declaration*> declProgramme, std::v
         instruction->resolveScopeVariables(declProgramme,paramFunction,this->declarations, functionProgram);
     }
 }
+
 void Bloc::resolveScopeVariables(std::vector<Declaration*> declProgramme, std::vector<Declaration*> paramFunction, std::vector<Declaration*> declBloc, std::vector<Function*> functionProgram){
     for ( auto instruction : this->instructions){
         instruction->resolveScopeVariables(declProgramme,paramFunction,declBloc, functionProgram);
@@ -95,13 +96,11 @@ Bloc::Bloc(const Bloc &unBloc) {
 #endif
 }
 
-
 Bloc::Bloc() {
 #ifdef MAP
     cout << "Appel au constructeur de <Bloc>" << endl;
 #endif
 }
-
 
 Bloc::~Bloc() {
 #ifdef MAP

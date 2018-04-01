@@ -22,8 +22,7 @@ enum Mnemonique
 
 class IRInstr
 {
-    public :
-
+    public:
         Mnemonique getMnemonique() const;
 
         string getParam(int index) const;
@@ -37,8 +36,7 @@ class IRInstr
 
         virtual ~IRInstr();
 
-    private :
-
+    private:
         ControlFlowGraph * controlFlowGraph;
 
         Mnemonique mnemonique;

@@ -10,10 +10,7 @@ class IRInstr;
 
 class BasicBlock
 {
-    protected :
-
-    public :
-
+    public:
         vector <IRInstr> getIRInstrs() const;
 
         void addIRInstr(IRInstr iRInstr);
@@ -26,8 +23,7 @@ class BasicBlock
 
         virtual ~BasicBlock();
 
-    private :
-
+    private:
         vector <IRInstr> iRInstrs;
         BasicBlock * successor;
         BasicBlock * condSuccessor;

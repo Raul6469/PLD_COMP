@@ -35,6 +35,7 @@ void ControlFlowGraph::generateProlog(ostream & os, string functionName, int add
     os << "\tsubq\t$" << addressRangeSize << ", %rsp\n";
     os << "\n";
 }
+
 void ControlFlowGraph::generateEpilog(ostream & os, int addressRangeSize) const
 {
     #ifdef MAP
@@ -106,7 +107,6 @@ ControlFlowGraph::ControlFlowGraph(const ControlFlowGraph &controlFlowGraph)
 
     currentBasicBlock = basicBlocks.back();
 }
-
 
 ControlFlowGraph::ControlFlowGraph()
 {

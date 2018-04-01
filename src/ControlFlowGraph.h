@@ -14,10 +14,7 @@ class Programme;
 
 class ControlFlowGraph
 {
-    protected :
-
-    public :
-
+    public:
         void addIRInstr(IRInstr iRInstr);
 
         vector <BasicBlock*> getBasicBlocks() const;
@@ -38,7 +35,7 @@ class ControlFlowGraph
 
         virtual ~ControlFlowGraph();
 
-    private :
+    private:
         Programme * programme;
         BasicBlock * currentBasicBlock;
         vector <BasicBlock*> basicBlocks;

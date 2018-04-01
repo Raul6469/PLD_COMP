@@ -33,13 +33,11 @@ Expression::Expression(const Expression &unExpression) {
 #endif
 }
 
-
 Expression::Expression() {
 #ifdef MAP
     cout << "Appel au constructeur de <Expression>" << endl;
 #endif
 }
-
 
 Expression::~Expression() {
 #ifdef MAP

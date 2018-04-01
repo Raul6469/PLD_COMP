@@ -92,7 +92,6 @@ Variable::Variable(const Variable &unVariable) {
 #endif
 }
 
-
 Variable::Variable(TypeVariable typeVariable, std::string valeur) {
     this->typeVariable = typeVariable;
     this->valeur = valeur;

@@ -17,7 +17,6 @@ class Declaration;
 class Programme
 {
     public:
-
         IR generateIR();
 
         friend ostream & operator<<(ostream & stream, const Programme & programme);
@@ -42,9 +41,7 @@ class Programme
 
         virtual ~Programme();
 
-    private :
-
+    private:
         vector <Function*> functions;
         vector <Declaration*> declarations;
 };
-
