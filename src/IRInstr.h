@@ -16,6 +16,7 @@ enum Mnemonique
 	FUNCTION_CALL = 2,
 	
 	REG_STORE = 3,
+	VAR_DECLARATION = 4,
 
 	PUTCHAR = 100
 };

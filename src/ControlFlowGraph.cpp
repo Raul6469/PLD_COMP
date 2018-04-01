@@ -21,6 +21,15 @@ void ControlFlowGraph::newBasicBlock()
 	currentBasicBlock = newBasicBlock;
 }
 
+void ControlFlowGraph::generateDeclaration(ostream & os, string varName) const
+{
+    #ifdef MAP
+        cout << "Appel a la methode ControlFlowGraph::newDeclaration" << endl;
+    #endif
+
+    os << varName << ":    .BYTE 4\n";
+}
+
 // Generate Prolog of Function
 void ControlFlowGraph::generateProlog(ostream & os, string functionName, int addressRangeSize) const
 {
@@ -84,6 +93,11 @@ void ControlFlowGraph::generateASM(ostream & os) const
 				{
 					os << "\tmovl\t$" << iRInstr.getParam(0) <<", %edi\n";
 					os << "\tcall putchar\n";
+					break;
+				}
+				case VAR_DECLARATION :
+				{
+					generateDeclaration(os, iRInstr.getParam(0));
 					break;
 				}
 			}

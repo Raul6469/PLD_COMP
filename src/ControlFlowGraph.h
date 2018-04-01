@@ -24,6 +24,8 @@ class ControlFlowGraph
 
 		void newBasicBlock();
 
+		void generateDeclaration(ostream & os, string varName) const;
+
 		void generateProlog(ostream &os, string functionName, int addressRangeSize) const;
 		
 		void generateEpilog(ostream & os, int addressRangeSize) const;
