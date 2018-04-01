@@ -5,7 +5,7 @@ using namespace std;
 
 void VariableOpe::generateIR(ControlFlowGraph * controlFlowGraph)
 {
-	
+
 }
 
 void VariableOpe::print(std::ostream &stream) const
@@ -36,7 +36,6 @@ VariableOpe::VariableOpe(TypeVariable typeVariable, std::string valeur, PrePos o
     cout << "Appel au constructeur de <VariableDecPos>" << endl;
 #endif
 }
-
 
 VariableOpe::~VariableOpe() {
 #ifdef MAP

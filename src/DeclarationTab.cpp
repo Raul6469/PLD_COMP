@@ -24,9 +24,6 @@ std::ostream& operator<<(std::ostream& stream, const DeclarationTab& declaration
 DeclarationTab &DeclarationTab::operator=(const DeclarationTab &unDeclarationTab) {
 }
 
-
-
-
 DeclarationTab::DeclarationTab(std::string name, Type type, std::string size):Declaration(name, type) {
     this->size = size;
 #ifdef MAP

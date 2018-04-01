@@ -12,7 +12,7 @@ class Bloc;
 class Declaration;
 class Function
 {
-	public:
+    public:
 
         void generateIR(ControlFlowGraph * controlFlowGraph);
 
@@ -20,7 +20,7 @@ class Function
 
         Function & operator=(const Function & function);
 
-		int calculateAddressRangeSize();
+        int calculateAddressRangeSize();
 
         void setParameters(vector <Declaration*> parameters);
 

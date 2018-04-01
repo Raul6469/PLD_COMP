@@ -10,7 +10,7 @@ class Instruction {
 
 protected:
 
-	virtual void print(std::ostream& stream) const = 0;
+    virtual void print(std::ostream& stream) const = 0;
 
 public:
 

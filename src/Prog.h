@@ -27,10 +27,10 @@ using namespace std;
 
 class Prog : public ProgBaseVisitor 
 {
-	public:
+    public:
 
-	antlrcpp::Any visitLprog(ProgParser::LprogContext *ctx) override
-	{
+    antlrcpp::Any visitLprog(ProgParser::LprogContext *ctx) override
+    {
         Programme* programme = new Programme();
         for(auto i : ctx->decl()){
             programme->addDeclarations(visit(i));
@@ -39,8 +39,8 @@ class Prog : public ProgBaseVisitor
             programme->addFunction(visit(i));
         }
         cout << *programme;
-		return programme;
-	}
+        return programme;
+    }
 
     antlrcpp::Any visitLbloc(ProgParser::LblocContext *ctx) override
     {

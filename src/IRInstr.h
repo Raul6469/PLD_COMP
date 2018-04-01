@@ -11,35 +11,36 @@ class ControlFlowGraph;
 
 enum Mnemonique
 {
-	FUNCTION_DECLARATION = 0,
-	FUNCTION_RETURN = 1,
-	FUNCTION_CALL = 2,
-	
-	REG_STORE = 3,
+    FUNCTION_DECLARATION = 0,
+    FUNCTION_RETURN = 1,
+    FUNCTION_CALL = 2,
+    
+    REG_STORE = 3,
 
-	PUTCHAR = 100
+    PUTCHAR = 100
 };
 
 class IRInstr
 {
-	public :
+    public :
 
-		Mnemonique getMnemonique() const;
+        Mnemonique getMnemonique() const;
 
-		string getParam(int index) const;
-		vector <string> getParams() const;
+        string getParam(int index) const;
+        vector <string> getParams() const;
 
-		IRInstr(const IRInstr & iRInstr);
+        IRInstr(const IRInstr & iRInstr);
 
-    		IRInstr();
-		IRInstr(Mnemonique mnemonique, vector <string> params);
+        IRInstr();
 
-		virtual ~IRInstr();
+        IRInstr(Mnemonique mnemonique, vector <string> params);
 
-	private :
+        virtual ~IRInstr();
 
-		ControlFlowGraph * controlFlowGraph;
+    private :
 
-		Mnemonique mnemonique;
-		vector <string> params;
+        ControlFlowGraph * controlFlowGraph;
+
+        Mnemonique mnemonique;
+        vector <string> params;
 };

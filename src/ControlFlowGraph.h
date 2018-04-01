@@ -14,32 +14,32 @@ class Programme;
 
 class ControlFlowGraph
 {
-	protected :
+    protected :
 
-	public :
+    public :
 
-		void addIRInstr(IRInstr iRInstr);
+        void addIRInstr(IRInstr iRInstr);
 
-		vector <BasicBlock*> getBasicBlocks() const;
+        vector <BasicBlock*> getBasicBlocks() const;
 
-		void newBasicBlock();
+        void newBasicBlock();
 
-		void generateProlog(ostream &os, string functionName, int addressRangeSize) const;
-		
-		void generateEpilog(ostream & os, int addressRangeSize) const;
+        void generateProlog(ostream &os, string functionName, int addressRangeSize) const;
+        
+        void generateEpilog(ostream & os, int addressRangeSize) const;
 
-		void generateASM(ostream &os) const;
+        void generateASM(ostream &os) const;
 
-		ControlFlowGraph(const ControlFlowGraph &controlFlowGraph);
+        ControlFlowGraph(const ControlFlowGraph &controlFlowGraph);
 
-    		ControlFlowGraph();
+        ControlFlowGraph();
 
-    		ControlFlowGraph(Programme * prog);
+        ControlFlowGraph(Programme * prog);
 
-		virtual ~ControlFlowGraph();
+        virtual ~ControlFlowGraph();
 
-	private :
-		Programme * programme;
-		BasicBlock * currentBasicBlock;
-		vector <BasicBlock*> basicBlocks;
+    private :
+        Programme * programme;
+        BasicBlock * currentBasicBlock;
+        vector <BasicBlock*> basicBlocks;
 };

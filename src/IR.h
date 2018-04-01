@@ -11,21 +11,21 @@ class ControlFlowGraph;
 
 class IR
 {
-	public :
+    public :
 
-		void generateASM(ostream & os) const;
+        void generateASM(ostream & os) const;
 
-		void addControlFlowGraph(ControlFlowGraph * controlFlowGraph);
+        void addControlFlowGraph(ControlFlowGraph * controlFlowGraph);
 
-		vector <ControlFlowGraph*> getControlFlowGraphs() const;
+        vector <ControlFlowGraph*> getControlFlowGraphs() const;
 
-    	IR();
-		IR(const IR & iR);
-		IR(vector <ControlFlowGraph*> controlFlowGraphs);
+        IR();
+        IR(const IR & iR);
+        IR(vector <ControlFlowGraph*> controlFlowGraphs);
 
-		virtual ~IR();
+        virtual ~IR();
 
-	private :
+    private :
 
-		vector <ControlFlowGraph*> controlFlowGraphs;
+        vector <ControlFlowGraph*> controlFlowGraphs;
 };

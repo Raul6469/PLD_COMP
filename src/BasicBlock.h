@@ -10,25 +10,25 @@ class IRInstr;
 
 class BasicBlock
 {
-	protected :
+    protected :
 
-	public :
+    public :
 
-		vector <IRInstr> getIRInstrs() const;
+        vector <IRInstr> getIRInstrs() const;
 
-		void addIRInstr(IRInstr iRInstr);
+        void addIRInstr(IRInstr iRInstr);
 
-		void generateASM();
+        void generateASM();
 
-		BasicBlock(const BasicBlock & basicBlock);
+        BasicBlock(const BasicBlock & basicBlock);
 
-    		BasicBlock();
+        BasicBlock();
 
-		virtual ~BasicBlock();
+        virtual ~BasicBlock();
 
-	private :
+    private :
 
-		vector <IRInstr> iRInstrs;
-		BasicBlock * successor;
-		BasicBlock * condSuccessor;
+        vector <IRInstr> iRInstrs;
+        BasicBlock * successor;
+        BasicBlock * condSuccessor;
 };
