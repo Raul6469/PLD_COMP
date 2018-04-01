@@ -10,7 +10,7 @@ using namespace std;
 void AppelFunction::generateIR(ControlFlowGraph * controlFlowGraph)
 {
     // Special Case for putchar
-    if (name == "putchar")
+	if (name == "putchar")
     {
         controlFlowGraph->addIRInstr(IRInstr(PUTCHAR, {to_string((int)((variables[0]->getValeur())[1]))}));
     }
