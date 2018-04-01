@@ -25,7 +25,7 @@
 
 using namespace std;
 
-class Prog : public ProgBaseVisitor 
+class Prog : public ProgBaseVisitor
 {
     public:
         antlrcpp::Any visitLprog(ProgParser::LprogContext *ctx) override

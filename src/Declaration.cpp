@@ -5,7 +5,6 @@ using namespace std;
 
 void Declaration::generateIR(ControlFlowGraph * controlFlowGraph)
 {
-
 }
 
 void Declaration::print(std::ostream &stream) const

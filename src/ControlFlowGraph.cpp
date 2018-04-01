@@ -15,9 +15,9 @@ vector <BasicBlock*> ControlFlowGraph::getBasicBlocks() const
 void ControlFlowGraph::newBasicBlock()
 {
     BasicBlock * newBasicBlock = new BasicBlock;
-    
+
     basicBlocks.push_back(newBasicBlock);
-    
+
     currentBasicBlock = newBasicBlock;
 }
 
@@ -70,7 +70,7 @@ void ControlFlowGraph::generateASM(ostream & os) const
                 {
                     // Generate Prolog of Function
                     generateProlog(os, iRInstr.getParam(0), stoi(iRInstr.getParam(1)));
-                    
+
                     break;
                 }
                 // Function Return
@@ -78,7 +78,7 @@ void ControlFlowGraph::generateASM(ostream & os) const
                 {
                     // Generate Epilog
                     generateEpilog(os, stoi(iRInstr.getParam(0)));
-                    
+
                     break;
                 }
                 case PUTCHAR :

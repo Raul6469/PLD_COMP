@@ -5,7 +5,6 @@ using namespace std;
 
 void VariableOpe::generateIR(ControlFlowGraph * controlFlowGraph)
 {
-
 }
 
 void VariableOpe::print(std::ostream &stream) const

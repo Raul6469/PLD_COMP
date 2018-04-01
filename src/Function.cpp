@@ -12,21 +12,21 @@ void Function::generateIR(ControlFlowGraph * controlFlowGraph)
 {
     // Calculate Address Range Size
     int addressRangeSize = calculateAddressRangeSize();
-    
+
     /*
      * Prolog
      */
-    
+
     controlFlowGraph->newBasicBlock();
-    
+
     controlFlowGraph->addIRInstr(IRInstr(FUNCTION_DECLARATION, {name, to_string(addressRangeSize)}));
-    
+
     /*
      * Body
      */
-    
+
     controlFlowGraph->newBasicBlock();
-    
+
     // Generate IR for Body
     bloc->generateIR(controlFlowGraph);
 
@@ -81,7 +81,6 @@ ostream & operator<<(ostream & stream, const Function & function)
 
 Function & Function::operator=(const Function & function)
 {
-
 }
 
 string Function::getName()

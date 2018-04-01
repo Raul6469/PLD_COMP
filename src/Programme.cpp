@@ -10,14 +10,14 @@ IR Programme::generateIR()
 {
     // Create IR
     IR iR;
-    
+
     ControlFlowGraph * controlFlowGraph;
 
     // For each Function of Program
     for (auto function : functions)
     {
         controlFlowGraph = new ControlFlowGraph;
-        
+
         // Generate Function Control Flow Graph
         function->generateIR(controlFlowGraph);
 
@@ -57,7 +57,6 @@ void Programme::addDeclarations(vector<Declaration*> declarations)
     for(auto decl : declarations){
         this->declarations.emplace_back(decl);
     }
-
 }
 
 vector <Function*> Programme::getFunctions()
@@ -115,7 +114,6 @@ void Programme::resolveTypeExpr(){
 
 Programme & Programme::operator=(const Programme & programme)
 {
-
 }
 
 Programme::Programme(const Programme & programme)

@@ -5,7 +5,6 @@ using namespace std;
 
 void VariableIndex::generateIR(ControlFlowGraph * controlFlowGraph)
 {
-
 }
 
 void VariableIndex::print(std::ostream &stream) const

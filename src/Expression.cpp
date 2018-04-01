@@ -16,7 +16,6 @@ Expression &Expression::operator=(const Expression &unExpression) {
 }
 
 void Expression::resolveScopeVariables(std::vector<Declaration*> declProgramme, std::vector<Declaration*> paramFunction, std::vector<Declaration*> declBloc, std::vector<Function*> functionProgram){
-
 }
 
 Type Expression::getType() {

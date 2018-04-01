@@ -5,7 +5,6 @@ using namespace std;
 
 void InitialisationTab::generateIR(ControlFlowGraph * controlFlowGraph)
 {
-
 }
 
 void InitialisationTab::print(std::ostream &stream) const
@@ -30,7 +29,6 @@ void InitialisationTab::resolveScopeVariables(std::vector<Declaration*> declProg
     for(auto var : this->variables){
         var->resolveScopeVariables(declProgramme, paramFunction, declBloc, functionProgram);
     }
-
 }
 
 void InitialisationTab::resolveTypeExpr(){
